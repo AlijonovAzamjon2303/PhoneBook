@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Assalomu alaykum");
+        Console.WriteLine("Yangi junior brach qo'shildi");
+    }
+}
