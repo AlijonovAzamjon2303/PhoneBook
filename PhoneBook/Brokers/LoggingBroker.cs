@@ -4,7 +4,6 @@
     {
         public void LogInformation(string message) =>
             Console.WriteLine(message); 
-            
         
         public void LogError(Exception exception)
         {
