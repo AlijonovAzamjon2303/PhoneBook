@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Models;
+using System;
 
 namespace PhoneBook.Brokers.Loggings
 {
@@ -13,6 +14,11 @@ namespace PhoneBook.Brokers.Loggings
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(exception.Message);
             Console.ResetColor();
+        }
+
+        public void LogContact(Contact contact)
+        {
+            Console.WriteLine($"{contact.Id} || {contact.Name} || {contact.Phone}");
         }
     }
 }

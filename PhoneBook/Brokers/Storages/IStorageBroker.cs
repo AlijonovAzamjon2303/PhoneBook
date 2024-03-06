@@ -10,6 +10,6 @@ namespace PhoneBook.Brokers.Storages
     internal interface IStorageBroker
     {
         Contact AddContact(Contact contact);
-
+        Contact[] ReadAll();
     }
 }
