@@ -11,6 +11,7 @@ namespace PhoneBook.Brokers.Loggings
     {
         void LogInformation(string message);
         void LogError(Exception exception);
+        void LogError(string userMessage);
         void LogContact(Contact contact);
     }
 }
