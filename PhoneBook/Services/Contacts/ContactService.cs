@@ -1,6 +1,7 @@
 ﻿using PhoneBook.Brokers.Loggings;
 using PhoneBook.Brokers.Storages;
 using PhoneBook.Models;
+using System;
 
 namespace PhoneBook.Services.Contacts
 {
@@ -16,6 +17,15 @@ namespace PhoneBook.Services.Contacts
 
         public Contact AddContact(Contact contact) =>
             this.storageBroker.AddContact(contact);
-        
+
+        public void ShowContacts()
+        {
+            Contact[] contacts = this.storageBroker.ReadAll();
+            
+            foreach (Contact contact in contacts)
+            {
+                this.loggingBroker.LogContact(contact);
+            }
+        }
     }
 }

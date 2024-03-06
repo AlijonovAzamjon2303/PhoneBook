@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace PhoneBook.Brokers.Loggings
     internal interface ILoggingBroker
     {
         void LogInformation(string message);
-
         void LogError(Exception exception);
+        void LogContact(Contact contact);
     }
 }
