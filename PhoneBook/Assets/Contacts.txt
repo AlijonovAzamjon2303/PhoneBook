@@ -1,2 +1,3 @@
 2*Temur*0987654
 1*YaqubAliy*12345
+3*Avazbek*2823
