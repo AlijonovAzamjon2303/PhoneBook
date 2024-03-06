@@ -11,7 +11,7 @@ namespace PhoneBook.Brokers.Loggings
 
         public void LogError(Exception exception)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(exception.Message);
             Console.ResetColor();
         }
@@ -19,6 +19,13 @@ namespace PhoneBook.Brokers.Loggings
         public void LogContact(Contact contact)
         {
             Console.WriteLine($"{contact.Id} || {contact.Name} || {contact.Phone}");
+        }
+
+        public void LogError(string userMessage)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(userMessage);
+            Console.ResetColor();
         }
     }
 }

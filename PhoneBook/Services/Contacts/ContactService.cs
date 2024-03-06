@@ -27,5 +27,21 @@ namespace PhoneBook.Services.Contacts
                 this.loggingBroker.LogContact(contact);
             }
         }
+
+        public void Update(Contact contact)
+        {
+            if(contact is null)
+            {
+                this.loggingBroker.LogError("Your contact is empty");
+                return;
+            }
+            
+            if(contact.Id == 0 || String.IsNullOrEmpty(contact.Name) || String.IsNullOrEmpty(contact.Phone)) 
+            {
+                this.loggingBroker.LogError("Your contact is invalid");
+            }
+            
+            this.storageBroker.UpdateContact(contact);
+        }
     }
 }

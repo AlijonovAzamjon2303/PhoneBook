@@ -10,10 +10,11 @@ class Program
         Contact contact = new Contact
         {
             Id = 1,
-            Name = "A'zamjon",
+            Name = "Legend",
             Phone = "+998 94 480 49 00"
         };
 
-        contactService.ShowContacts(); 
+        contactService.Update(null);
+        contactService.ShowContacts();
     }
 }
