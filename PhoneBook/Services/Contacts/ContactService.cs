@@ -18,6 +18,11 @@ namespace PhoneBook.Services.Contacts
         public Contact AddContact(Contact contact) =>
             this.storageBroker.AddContact(contact);
 
+        public void Delete(int id)
+        {
+            this.storageBroker.DeleteContact(id);
+        }
+
         public void ShowContacts()
         {
             Contact[] contacts = this.storageBroker.ReadAll();

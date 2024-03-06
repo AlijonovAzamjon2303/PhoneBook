@@ -19,6 +19,20 @@ namespace PhoneBook.Brokers.Storages
             return contact;
         }
 
+        public void DeleteContact(int id)
+        {
+            Contact[] contacts = this.ReadAll();
+            File.WriteAllText(FilePath, string.Empty);
+
+            for (int i = 0; i < contacts.Length; i++)
+            {
+                if (contacts[i].Id != id) 
+                {
+                    this.AddContact(contacts[i]);
+                }
+            }
+        }
+
         public Contact[] ReadAll() 
         {
             string []allLines = File.ReadAllLines(FilePath);
