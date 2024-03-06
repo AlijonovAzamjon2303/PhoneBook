@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneBook.Brokers
+namespace PhoneBook.Brokers.Loggings
 {
     internal interface ILoggingBroker
     {

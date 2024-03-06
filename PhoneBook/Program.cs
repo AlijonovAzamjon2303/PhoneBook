@@ -1,8 +1,20 @@
-﻿class Program
+﻿using PhoneBook.Models;
+using PhoneBook.Services.Contacts;
+using System;
+
+class Program
 {
     static void Main()
     {
-        Console.WriteLine("Assalomu alaykum");
-        Console.WriteLine("Yangi junior brach qo'shildi");
+        IContactService contactService = new ContactService();  
+
+        Contact contact = new Contact
+        {
+            Id = 1, 
+            Name = "A'zamjon",
+            Phone = "+998 94 480 49 00"
+        };
+
+        contactService.AddContact(contact);
     }
 }
