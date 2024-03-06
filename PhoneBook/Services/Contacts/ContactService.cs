@@ -27,5 +27,10 @@ namespace PhoneBook.Services.Contacts
                 this.loggingBroker.LogContact(contact);
             }
         }
+
+        public void Update(Contact contact)
+        {
+            this.storageBroker.UpdateContact(contact);
+        }
     }
 }

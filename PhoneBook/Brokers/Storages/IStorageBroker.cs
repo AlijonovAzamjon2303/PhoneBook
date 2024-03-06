@@ -11,5 +11,6 @@ namespace PhoneBook.Brokers.Storages
     {
         Contact AddContact(Contact contact);
         Contact[] ReadAll();
+        void UpdateContact(Contact contact);   
     }
 }

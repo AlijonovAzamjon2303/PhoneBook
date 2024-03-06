@@ -11,5 +11,6 @@ namespace PhoneBook.Services.Contacts
     {
         Contact AddContact(Contact contact);
         void ShowContacts();
+        void Update(Contact contact);    
     }
 }

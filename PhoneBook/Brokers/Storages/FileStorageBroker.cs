@@ -39,6 +39,28 @@ namespace PhoneBook.Brokers.Storages
 
             return contacts;
         }
+
+        public void UpdateContact(Contact contact)
+        {
+            Contact[] contacts = this.ReadAll();
+            
+            for(int i = 0;i < contacts.Length;i++)
+            {
+                if (contacts[i].Id == contact.Id)
+                {
+                    contacts[i] = contact;
+                    break;
+                }
+            }
+
+            File.WriteAllText(FilePath, string.Empty);
+
+            foreach(Contact contact1 in contacts)
+            {
+                this.AddContact(contact1);
+            }
+        }
+
         private void EnsureFileExists()
         {
             bool fileExists = File.Exists(FilePath);
