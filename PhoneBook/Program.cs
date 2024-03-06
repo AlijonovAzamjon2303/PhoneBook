@@ -14,7 +14,7 @@ class Program
             Phone = "+998 94 480 49 00"
         };
 
-        contactService.Update(null);
+        contactService.Delete(1);
         contactService.ShowContacts();
     }
 }
